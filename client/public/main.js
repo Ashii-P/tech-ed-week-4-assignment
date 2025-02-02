@@ -1,4 +1,4 @@
-const app = document.getElementById("app");
+const postContainer = document.getElementById("post-container");
 const cymru_api = "https://tech-ed-week-4-assignment.onrender.com";
 
 async function fetchPosts() {
@@ -20,17 +20,17 @@ function displayCymruPosts(param) {
     pTag.innerText = singlePost.comment;
     image.src = singlePost.photo;
     deleteButton.innerText = `Delete Post`;
+
+    deleteButton.addEventListener(`click`, () => {
+      handleDelete(singlePost.id);
+    });
     div.appendChild(h3);
     div.appendChild(h4);
     div.appendChild(pTag);
     div.appendChild(image);
     div.appendChild(deleteButton);
 
-    app.appendChild(div);
-
-    deleteButton.addEventListener(`click`, () => {
-      handleDelete(singlePost.id);
-    });
+    postContainer.appendChild(div);
   });
 }
 
