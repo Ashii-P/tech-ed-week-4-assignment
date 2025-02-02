@@ -20,10 +20,6 @@ function displayCymruPosts(param) {
     pTag.innerText = singlePost.comment;
     image.src = singlePost.photo;
     deleteButton.innerText = `Delete Post`;
-
-    deleteButton.addEventListener(`click`, () => {
-      handleDelete(singlePost.id);
-    });
     div.appendChild(h3);
     div.appendChild(h4);
     div.appendChild(pTag);
@@ -31,6 +27,10 @@ function displayCymruPosts(param) {
     div.appendChild(deleteButton);
 
     app.appendChild(div);
+
+    deleteButton.addEventListener(`click`, () => {
+      handleDelete(singlePost.id);
+    });
   });
 }
 
