@@ -227,9 +227,6 @@ textarea:hover {
   body {
     overflow-x: hidden;
   }
-  header {
-    position: sticky;
-  }
   nav {
     flex-direction: column;
     padding: 10px;
@@ -262,7 +259,7 @@ textarea:hover {
   }
   #homepage-container {
     height: 100vh;
-    width: 100%;
+    width: 110vw;
     object-fit: cover;
     padding: 20px;
   }
