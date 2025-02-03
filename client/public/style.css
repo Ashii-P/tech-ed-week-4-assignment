@@ -227,6 +227,10 @@ textarea:hover {
   body {
     overflow-x: hidden;
   }
+  header {
+    position: absolute;
+    width: 110vw;
+  }
   nav {
     flex-direction: column;
     padding: 10px;
@@ -236,7 +240,7 @@ textarea:hover {
   #post-container {
     grid-template-columns: 1fr;
     padding: 10px;
-    width: 100vw;
+    width: 120vw;
   }
   #post {
     width: 100%;
