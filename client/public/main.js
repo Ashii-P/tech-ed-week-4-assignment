@@ -50,3 +50,18 @@ async function handleDelete(id) {
     fetchPosts();
   }
 }
+
+const form = document.getElementById("form");
+async function submitCymruPost(event) {
+  event.preventDefault();
+  const formData = new FormData(form);
+  const postData = Object.fromEntries(formData);
+  fetch(`${cymru_api}/cymruposts`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(postData),
+  });
+}
+form.addEventListener("submit", submitCymruPost);

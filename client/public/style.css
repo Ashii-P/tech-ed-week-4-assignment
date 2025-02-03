@@ -12,7 +12,10 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .home,
 .post-form {
@@ -23,7 +26,7 @@ nav {
 }
 a {
   text-decoration: none;
-  color: #ebd1b2;
+  color: #c79e71;
 }
 a:hover {
   cursor: pointer;
@@ -33,7 +36,7 @@ a:hover {
   font-weight: 900;
   font-style: normal;
   color: #899482;
-  font-size: 20px;
+  font-size: 30px;
 }
 #homepage-container {
   background-image: url("homepage_img.jpg");
@@ -42,20 +45,25 @@ a:hover {
   background-position: center;
   position: relative;
   background-size: cover;
+  align-items: center;
 }
 .sub-title {
   font-family: "Playfair Display", serif;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 600;
   font-style: normal;
   text-align: center;
   position: absolute;
-  color: #c79e71;
+  color: #ebd1b2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .cursive {
   font-family: "Lavishly Yours", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 50px;
 }
 #post-container {
   display: grid;
@@ -69,13 +77,20 @@ a:hover {
   background-color: #ebd1b2;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
   border-radius: 20px 20px 0px 0px;
+  width: 250px;
+}
+#post > * {
+  margin-bottom: 10px;
 }
 #place {
-  font-family: "Lavishly Yours", serif;
-  font-weight: 400;
+  font-family: "Elsie Swash Caps", serif;
+  font-weight: 900;
   font-style: normal;
-  font-size: 18px;
+  font-size: 20pxpx;
   color: #212924;
   text-align: left;
 }
@@ -83,7 +98,7 @@ a:hover {
   font-family: "Elsie Swash Caps", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
   color: #212924;
   text-align: left;
 }
@@ -101,6 +116,7 @@ a:hover {
   border-radius: 50%;
 }
 #delete-btn {
+  margin-top: 10px;
   font-family: "Poppins", serif;
   font-weight: 500;
   font-style: normal;
@@ -120,11 +136,11 @@ a:hover {
 }
 #post-title {
   display: flex;
-  text-align: center;
-  font-family: "Lavishly Yours", serif;
-  font-weight: 400;
+  align-self: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
   font-style: normal;
-  font-size: 22px;
+  font-size: 50px;
   top: 10px;
   color: #a05d3c;
 }
@@ -132,6 +148,7 @@ a:hover {
   width: 80vh;
   height: 60vh;
   display: flex;
+  flex-direction: column;
   top: 30px;
   font-family: "Elsie Swash Caps", serif;
   font-weight: 400;
@@ -155,6 +172,7 @@ textarea {
   height: 100px;
   padding: 10px 0px;
   border-radius: 4px;
+  color: #c79e71;
 }
 #post-btn {
   width: 140px;
