@@ -9,6 +9,38 @@
     <title>Whispers of Cymru</title>
   </head>
   <body>
-    <div id="post-container"></div>
+    <header>
+      <nav>
+        <a class="home" href="#homepage-container">HOME</a>
+        <h1 id="website-name">Whispers of Cymru</h1>
+        <a class="post-form" href="#form-container">POST</a>
+      </nav>
+    </header>
+    <main>
+      <div id="homepage-container">
+        <p class="sub-title">
+          Where mountains meet the sea <br />
+          & <br />
+          <span class="cursive">come to life</span>
+        </p>
+      </div>
+      <div id="post-container"></div>
+      <div id="form-container">
+        <h2 id="post-title">Make a Post :</h2>
+        <form id="form">
+          <input id="client-place" name="Name of Place:" type="text" />
+          <input id="client-postcode" name="Place's Postcode:" type="text" />
+          <textarea id="client-comment">Write Your Thoughts</textarea>
+          <input
+            id="client-place"
+            name="Photo:"
+            type="url"
+            placeholder="URL Only"
+          />
+          <button type="submit" id="post-btn">Post</button>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

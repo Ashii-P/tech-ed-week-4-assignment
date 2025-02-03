@@ -1,96 +1,180 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Elsie+Swash+Caps:wght@400;900&family=Lavishly+Yours&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Desktop Display */
+body {
+  margin: 0px;
+  box-sizing: border-box;
 }
-
+header {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home,
+.post-form {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
+  color: #ebd1b2;
 }
 a:hover {
-  color: #535bf2;
+  cursor: pointer;
 }
-
-body {
-  margin: 0;
+#website-name {
+  font-family: "Elsie Swash Caps", serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #899482;
+  font-size: 20px;
+}
+#homepage-container {
+  background-image: url("homepage_img.jpg");
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+  background-position: center;
+  position: relative;
+  background-size: cover;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.sub-title {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  position: absolute;
+  color: #c79e71;
 }
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.cursive {
+  font-family: "Lavishly Yours", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#post-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  height: 100vh;
+  width: 100%;
+  background-color: #899482;
+}
+#post {
+  background-color: #ebd1b2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  border-radius: 20px 20px 0px 0px;
+}
+#place {
+  font-family: "Lavishly Yours", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #212924;
+  text-align: left;
+}
+#postcode {
+  font-family: "Elsie Swash Caps", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #212924;
+  text-align: left;
+}
+#comment {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  color: #212924;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#photo {
+  width: 20px;
+  height: auto;
+  border-radius: 50%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+#delete-btn {
+  font-family: "Poppins", serif;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-style: normal;
+  font-size: 16px;
+  padding: 10px 20px 10px 15px;
+  background-color: transparent;
+  color: #a05d3c;
+  border: 1px solid #a05d3c;
+}
+#delete-btn:hover {
+  background-color: #a05d3c;
+  color: #ebd1b2;
+}
+#form-container {
+  height: 100vh;
+  background-color: #ebd1b2;
+}
+#post-title {
+  display: flex;
+  text-align: center;
+  font-family: "Lavishly Yours", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  top: 10px;
+  color: #a05d3c;
+}
+#form {
+  width: 80vh;
+  height: 60vh;
+  display: flex;
+  top: 30px;
+  font-family: "Elsie Swash Caps", serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  background-color: #899482;
+  border-radius: 10px;
+  color: #c79e71;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0px;
+  background-color: #ebd1b2;
+}
+input:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px 0px;
+  border-radius: 4px;
+}
+#post-btn {
+  width: 140px;
+  display: block;
+  margin: 0px auto;
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #899482;
+  background-color: #a05d3c;
+  padding: 15px;
+  text-align: center;
+  margin-top: 10px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#post-btn:hover {
+  background-color: #899482;
+  border: 2px solid #a05d3c;
+  color: #a05d3c;
 }

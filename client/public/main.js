@@ -21,13 +21,20 @@ function displayCymruPosts(param) {
     image.src = singlePost.photo;
     deleteButton.innerText = `Delete Post`;
 
+    h3.setAttribute("id", "place");
+    h4.setAttribute("id", "postcode");
+    pTag.setAttribute("id", "comment");
+    image.setAttribute("id", "photo");
+    deleteButton.setAttribute("id", "delete-btn");
+    div.setAttribute("id", "post");
     deleteButton.addEventListener(`click`, () => {
       handleDelete(singlePost.id);
     });
+
+    div.appendChild(image);
     div.appendChild(h3);
     div.appendChild(h4);
     div.appendChild(pTag);
-    div.appendChild(image);
     div.appendChild(deleteButton);
 
     postContainer.appendChild(div);
