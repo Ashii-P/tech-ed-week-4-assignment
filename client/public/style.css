@@ -86,10 +86,10 @@ a:hover {
   width: 400px;
   height: 700px;
   margin-left: 20px;
+  margin-bottom: 100px;
+  margin-top: 150px;
 }
-#post > * {
-  margin-bottom: 10px;
-}
+
 #place {
   font-family: "Elsie Swash Caps", serif;
   font-weight: 900;
