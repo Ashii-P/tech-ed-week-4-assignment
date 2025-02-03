@@ -13,7 +13,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 190vh;
+  width: 100vw;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -82,9 +82,9 @@ a:hover {
   gap: 10px;
   align-items: center;
   padding: 10px;
-  border-radius: 80px 80px 10px 10px;
+  border-radius: 200px 200px 10px 10px;
   width: 400px;
-  height: 800px;
+  height: 700px;
   margin-left: 20px;
 }
 #post > * {
@@ -115,10 +115,11 @@ a:hover {
   text-align: center;
 }
 #photo {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 50%;
+  margin-top: 5px;
 }
 #delete-btn {
   margin-top: 10px;
@@ -215,4 +216,37 @@ textarea:hover {
   background-color: #899482;
   border: 2px solid #a05d3c;
   color: #a05d3c;
+}
+
+/* Mobile Version */
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    width: 100vw;
+  }
+  #post-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  #post {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+  #form {
+    width: 90vw;
+    max-width: 400px;
+    padding: 20px;
+  }
+  .sub-title {
+    font-size: 35px;
+  }
+  #post-title {
+    font-size: 30px;
+  }
+  #homepage-container {
+    height: auto;
+    padding: 20px;
+  }
 }
