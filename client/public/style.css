@@ -228,7 +228,7 @@ textarea:hover {
     overflow-x: hidden;
   }
   header {
-    position: static;
+    position: sticky;
   }
   nav {
     flex-direction: column;
@@ -247,7 +247,7 @@ textarea:hover {
     margin: 10px 0;
   }
   #form-container {
-    width: 100vw;
+    width: 120vw;
   }
   #form {
     width: 90vw;
